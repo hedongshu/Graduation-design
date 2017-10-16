@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/public/js/jquery-3.2.1.min.js"></script>
+    <script src="/public/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/ty.css">
+    <title>不是东西</title>
+</head>
+
+<body>
+    <!-- 页面的导航 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">NanBei</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="###">Home</a>
+                    </li>
+                    <li>
+                        <a href="###">Home1</a>
+                    </li>
+                    <li>
+                        <a href="###">Home2</a>
+                    </li>
+                    <li>
+                        <a href="###">Home3</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="modal" data-target="#loginModal" href="">Login</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#signinModal" href="">Signin</a>
+                    </li>
+                </ul>
+                <!-- 用户登录之后显示的界面 -->
+                <ul class="nav navbar-nav navbar-right">
+                        <p class="navbar-text navbar-right">
+                            Hello,{{ username }}
+                            <a href="#" class="navbar-link">进入管理</a>
+                        </p>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Login modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="loginModalLabel">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">用户名</label>
+                            <input class="form-control" type="text" name="username" placeholder="请输入用户名"  >
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input class="form-control" type="password" name="password" placeholder="请输入密码"  >
+                        </div>
+                    </form>
+                    <small>请合理的输入用户名和密码 </small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="toSignin btn btn-default" >toSignin</button>
+                    <button type="button" class="loginSub btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Signin modal -->
+    <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="signinModal">Signin</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="signinForm">
+                        <div class="form-group">
+                            <label for="username">用户名</label>
+                            <input class="form-control" type="text" name="username" placeholder="请输入用户名"  >
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input class="form-control" type="password" name="password" placeholder="请输入密码"  >
+                        </div>
+                        <div class="form-group">
+                            <label for="repassword">请再次输入密码</label>
+                            <input class="form-control" type="password" name="repassword" placeholder="请输入密码"  >
+                        </div>
+                    </form>
+                    <small class="center-text"> 请合理的输入用户名和密码 </small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="toLogin btn btn-default">toLogin</button>
+                    <button type="button" class="signinSub btn btn-primary">Signin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 用block占位 -->
+   {% block document %}{% endblock %}
+
+    <footer>
+        <p>Copyright © 7hds.com 版权所有 | 赣ICP备17004609号</p>
+    </footer>
+
+    <script src="/public/js/index.js"></script>
+</body>
+
+</html>
