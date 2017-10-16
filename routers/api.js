@@ -30,6 +30,7 @@ router.post('/user/signin', function (req, res, next) {
             return newUser.save();
         }
     }).then(function (newInfo) {
+        code = 0;
         resData.message = '注册成功!';
         res.json(resData);
     })
@@ -38,7 +39,7 @@ router.post('/user/signin', function (req, res, next) {
 
 //登录功能
 router.post('/user/login', function (req, res, next) {
-
+    
     var username = req.body.username;
     var password = req.body.password;
     user.findOne({
@@ -51,14 +52,28 @@ router.post('/user/login', function (req, res, next) {
             res.json(resData);
         } else {
             resData.message = '登录成功!'
+            resData.code = 0;
             resData.userInfo = {
                 id: Info._id,
                 username: Info.username
             };
+            //设置cookie  返回userInfo
+            req.cookies.set('userInfo',JSON.stringify({
+                id: Info._id,
+                username: Info.username,
+                isAdmin: Info.isAdmin
+            }));
             res.json(resData);
             return;
         }
 
     })
 })
+
+//退出功能
+router.get('/user/logout',function(req,res,next){
+    req.cookies.set('userInfo',null);
+    res.json(resData);
+})
+
 module.exports = router;

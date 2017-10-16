@@ -6,7 +6,7 @@ $(function () {
     });
     $('#signinModal .modal-footer .toLogin').click(function () {
         $('#signinModal').modal('hide');
-        $('#loginModal').modal('show');
+        $('#loginModal').modal('show'); 
     });
 
     //注册功能
@@ -44,13 +44,27 @@ $(function () {
                 username: username,
                 password: password
             }, function (resData) {
-                console.log(resData);
+                $('#loginModal .modal-content small').html(resData.message);
+                if(resData.code == 0) {
+                    setTimeout(function() {
+                        window.location.reload();
+                    }, 100);
+                }
             });
         }
         
     })
 
-
+    //退出功能
+    $('#logOut').click(function(){
+        $.get('/api/user/logout',function(data){
+            if(data){
+                setTimeout(function() {
+                    window.location.reload();
+                }, 100);
+            };
+        })
+    })
 
 
 
