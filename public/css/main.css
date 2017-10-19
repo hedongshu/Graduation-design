@@ -1,0 +1,60 @@
+
+body {
+    padding-top: 60px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+
+.document {
+    border-bottom: 0.07rem solid black;
+    margin: 7rem 0;
+}
+
+.main {
+    flex: 1;
+}
+.main>.document {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.content {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.html {
+    margin-top: 5%;
+}
+h4 small {
+    margin: 0 1%;
+}
+.comment {
+    margin: 5% 0;
+    padding: 2rem;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#commentForm {
+    margin: 5% auto;
+}
+.com {
+    margin: 1% 0;
+    text-indent: 2rem;
+    
+}
+b {
+    margin-right: 10%;
+}
+footer {
+    height: 4rem;
+    text-align: center;
+    background-color: #34352C;
+}
+footer p {
+    line-height: 4rem;
+    color: #C9CABB
+}

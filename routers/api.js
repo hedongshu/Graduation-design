@@ -10,7 +10,7 @@ var resData = {
 //注册功能
 router.post('/user/signin', function (req, res, next) {
 
-    var username = req.body.username;
+    var username = req.body.usermame;
     var password = req.body.password;
     //检查数据库中是否存在该用户
     user.findOne({

@@ -4,8 +4,20 @@ var bodyPress = require('express');
 var Cookies = require('cookies');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var marked = require('marked');
 var app = express();
 
+//marked默认配置
+marked.setOptions({
+    renderer: new marked.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: true,
+    smartLists: true,
+    smartypants: false
+  });
 //配置nunjucks模板引擎
 nunjucks.configure('views', {
     autoescape: true,

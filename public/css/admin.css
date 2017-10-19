@@ -1,0 +1,11 @@
+body {
+    padding-top: 80px;
+    
+}
+.jumbotron {
+    text-align: center;
+}
+
+.content {
+    padding: 0 5%;
+}

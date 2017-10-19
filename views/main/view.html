@@ -1,0 +1,52 @@
+<!-- 继承 layout.html -->
+{% extends "main/layout.html" %}
+
+<!-- 文章 -->
+{% block document %}
+<div class="main">
+    <div class="content" id="view">
+        
+        <div class="text-center">
+                <h2>{{ contents.title }}</h2>
+                <h4>
+                    <small>时间：<a href="###">{{ contents.addTime.getFullYear() }}-{{ contents.addTime.getMonth()+1 }}-{{ contents.addTime.getDate() }}</a></small>
+                    <small>作者：<a href="###">{{ contents.user }}</a></small>
+                    <small>阅读量：<a href="###">{{ contents.reads }}</a></small>
+                    <small>评论数：<a href="###">{{ contents.comment.length }}</a></small>
+                </h4>
+        </div>
+        
+        <div class="html text-left">
+            {{ html | safe }}
+        </div>
+        
+        <hr>
+        {% if userInfo %}
+        <form id="commentForm">
+            <div class="form-group">
+                <label for="comment">评论</label>
+                <textarea class="form-control" rows="8" id="comment" placeholder="请输入评论" required name="{{ contents._id }}"></textarea>
+            </div>
+            <button type="button" class="btn btn-default" id="addCom">提交评论</button>
+        </form>
+        {% endif %}
+        <hr>
+        <div>
+            {% for com in contents.comment %}
+                <div class="comment">
+                    <b>{{ com.username }}</b>
+                    <b>{{ com.time.getFullYear() }}-{{ com.time.getMonth()+1 }}-{{ com.time.getDate() }}</b>
+                    <br>
+                    <div class="com">
+                        {{ com.text }}
+                    </div>
+                    
+                </div>
+            {% endfor %}
+
+        </div>
+            
+    </div>
+</div>
+
+{% endblock %}
