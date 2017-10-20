@@ -30,7 +30,7 @@ Node的安装可以说是很简单了 ,  直接去 [官网](http://nodejs.cn/dow
 
 我的操作系统是macOS 
 
-![F32FCC72-13BC-4D94-BBE0-E1BC1E46A2E6](/Users/hds/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/1179601966/QQ/Temp.db/F32FCC72-13BC-4D94-BBE0-E1BC1E46A2E6.png)
+![F32FCC72-13BC-4D94-BBE0-E1BC1E46A2E6](https://ws1.sinaimg.cn/large/006tNc79gy1fkofh70qpxj30h80c6wf2.jpg)
 
 下载好了打开 ,  然后无脑下一步就好了
 
@@ -50,7 +50,7 @@ Emmmmm , 大概就这样吧
 
 首先创建好项目的目录
 
-![AED9F6EF-61C9-42F3-B5E0-A9E63572B706](/Users/hds/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/1179601966/QQ/Temp.db/AED9F6EF-61C9-42F3-B5E0-A9E63572B706.png)
+![AED9F6EF-61C9-42F3-B5E0-A9E63572B706](https://ws2.sinaimg.cn/large/006tNc79gy1fkofh83uvgj30by0biq3g.jpg)
 
 这就是开始的目录了 , 后面你就明白这些文件夹是干啥的了
 
@@ -378,7 +378,7 @@ app.get('/',function(req,res){
 
 先写好 ,  等要渲染的时候就不用在意样式的问题了 只需要专注于内容
 
-![94B3F8B37ACB9ADE026A8A598494B321](/Users/hds/Library/Containers/com.tencent.qq/Data/Library/Caches/Images/94B3F8B37ACB9ADE026A8A598494B321.jpg)
+![94B3F8B37ACB9ADE026A8A598494B321](https://ws2.sinaimg.cn/large/006tNc79gy1fkofh6fie6j31160hujsp.jpg)
 
 
 
